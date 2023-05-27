@@ -1,21 +1,17 @@
-package ar.com.salud.sancor.clase_1.browser;
+package ar.com.salud.sancor.clase_1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MetodosGet {
-
+public class AperturaBrowser {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
 
+        //Creamos un webdriver del tipo browser
         WebDriver driver = new ChromeDriver();
-        /*Apertura browser*/
-        driver.get("https://www.saucedemo.com/");
 
-        System.out.println("Metodo getTitle(): " + driver.getTitle());
-        System.out.println("Metodo getCurrentUrl(): " + driver.getCurrentUrl());
-        System.out.println("Metodo getPageSource(): " + driver.getPageSource());
-
+        //Mediante el método get, indicamos la URL a visitar (apertura del browser)
+        driver.get("https://www.google.com/");
 
         /*Cerrado browser*/
         //driver.close();//cierra ventana actual
